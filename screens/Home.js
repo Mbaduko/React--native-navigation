@@ -21,11 +21,12 @@
             flex :1,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#191919',
+            backgroundColor: '#0f0f0f',
         },
         pyonda: {
             borderWidth:2,
             borderRadius: 20,
-            backgroundColor: 'green'
+            padding: 8,
+            backgroundColor: 'rgba(46,139,87,0.7)'
         }
     })
