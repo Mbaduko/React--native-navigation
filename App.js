@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './screens/Home.js';
 import Details from './screens/Details.js';
+import { TouchableOpacity, Text } from 'react-native';
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -27,7 +28,13 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={Home}
-          options={{title: 'Home screen'}}
+          options={{title: 'Home screen',
+            headerLeft: () => (
+              <TouchableOpacity>
+                <Text>MENU</Text>
+              </TouchableOpacity>
+            ),
+          }}
         />
         <Stack.Screen 
           name="Details"
@@ -36,5 +43,5 @@ export default function App() {
        />
       </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
